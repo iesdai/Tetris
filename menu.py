@@ -22,15 +22,15 @@ class Menu:
         # Отрисовываем заголовок
         title_text = 'Tetris Game'
         title = settings.FONT_MAIN.render(title_text, True, settings.CYAN)
-        title_x = settings.GAME_WINDOWS[0] // 2 - title.get_width() // 2
-        title_y = settings.GAME_WINDOWS[1] // 2 - title.get_height() // 2
+        title_x = settings.WINDOWS[0] // 2 - title.get_width() // 2
+        title_y = settings.WINDOWS[1] // 2 - title.get_height() // 2
         self.screen.blit(title, (title_x, title_y))
 
         # Отрисовываем инструкции для начала игры и выхода
         start_text = 'Чтобы начать нажмите пробел'
         start = settings.FONT_MAIN.render(start_text, True, settings.WHITE)
-        start_x = settings.GAME_WINDOWS[0] // 2 - start.get_width() // 2
-        start_y = settings.GAME_WINDOWS[1] // 2 + start.get_height() // 2
+        start_x = settings.WINDOWS[0] // 2 - start.get_width() // 2
+        start_y = settings.WINDOWS[1] // 2 + start.get_height() // 2
         self.screen.blit(start, (start_x, start_y))
         end_text = 'Чтобы выйти из игры нажмите esc(escape)'
         end = settings.FONT_MAIN.render(end_text, True, settings.RED)
